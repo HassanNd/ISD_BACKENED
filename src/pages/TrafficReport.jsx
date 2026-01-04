@@ -9,7 +9,7 @@ function TrafficReport() {
 
   const fetchTraffic = async (order) => {
     const res = await axios.get(
-      `http://localhost:5000/api/traffic?sort=${order}`,
+      `https://isd-frontend-5.onrender.com/api/traffic?sort=${order}`,
       {
         headers: {
           Authorization: `Bearer ${token}`
