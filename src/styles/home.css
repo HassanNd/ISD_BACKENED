@@ -1,0 +1,97 @@
+/* ===== GLOBAL RTL ===== */
+.home-container {
+  direction: rtl;
+  font-family: "Arial", sans-serif;
+}
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  min-height: 80vh;
+  background-image: url("https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19");
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 31, 68, 0.65);
+}
+
+/* ===== TITLE ===== */
+.hero-title {
+  position: relative;
+  color: white;
+  font-size: 32px;
+  margin-bottom: 50px;
+  z-index: 1;
+}
+
+/* ===== CARDS ===== */
+.cards-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+
+.service-card {
+  background: white;
+  border-radius: 16px;
+  padding: 30px 25px;
+  width: 320px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+}
+
+.service-card h2 {
+  font-size: 20px;
+  color: #1f3c88;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== NEWS ===== */
+.news-section {
+  background: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.news-section h2 {
+  font-size: 26px;
+  color: #1f3c88;
+}
+
+.underline {
+  width: 60px;
+  height: 3px;
+  background: #1f3c88;
+  margin: 10px auto 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 22px;
+  }
+
+  .service-card {
+    width: 100%;
+    max-width: 340px;
+  }
+}

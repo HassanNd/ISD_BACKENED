@@ -1,0 +1,100 @@
+.about-page {
+  direction: rtl;
+  background: #f5f6f8;
+}
+
+/* ===== HERO ===== */
+.about-hero {
+  position: relative;
+  height: 260px;
+  background-image: url("https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 60px;
+}
+
+.about-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.about-hero h1 {
+  position: relative;
+  color: white;
+  font-size: 34px;
+  z-index: 1;
+}
+
+/* ===== DECISIONS ===== */
+.decisions-container {
+  max-width: 1100px;
+  margin: -60px auto 60px;
+  padding: 0 20px;
+}
+
+.decision-card {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.decision-content {
+  max-width: 75%;
+}
+
+.decision-date {
+  display: inline-block;
+  background: #f0f0f0;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.decision-text {
+  font-size: 17px;
+  line-height: 1.8;
+  margin: 15px 0;
+  color: #000;
+}
+
+.read-more {
+  color: #1f3c88;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* ===== LOGO ===== */
+.decision-logo img {
+  width: 120px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .about-hero {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .decision-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .decision-content {
+    max-width: 100%;
+  }
+
+  .decision-logo {
+    margin-top: 20px;
+  }
+}

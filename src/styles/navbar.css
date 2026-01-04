@@ -1,0 +1,48 @@
+.navbar {
+  background: #0a1f44;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+}
+
+.links a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.links button {
+  background: #ffcc00;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  .links {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+
+  .links a,
+  .links button {
+    margin: 5px;
+  }
+}
