@@ -1,21 +1,24 @@
 import { useState } from "react";
 import "../styles/news.css";
+import img12 from "../assets/12.jpg";
+import img13 from "../assets/13.jpg";
+import img14 from "../assets/3.jpg";
 
 const newsData = [
   {
-    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+    image: img12,
     date: "31 كانون الأول 2025",
     title:
       "الوزير الحجار استقبل المديرة العامة للشؤون السياسية واللاجئين فاتن يونس..."
   },
   {
-    image: "https://images.unsplash.com/photo-1549923746-c502d488b3ea",
+    image: img13,
     date: "31 كانون الأول 2025",
     title:
       "الوزير الحجار أشرف على إطلاق دوريات قوى الأمن الداخلي خلال ليلة رأس السنة"
   },
   {
-    image: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620",
+    image: img14,
     date: "31 كانون الأول 2025",
     title:
       "الوزير الحجار تفقد تمركزات وحدات قوى الأمن الداخلي والدفاع المدني خلال ليلة..."

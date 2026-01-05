@@ -39,3 +39,53 @@
 .navbar-links a:hover {
   text-decoration: underline;
 }
+/* ===== MOBILE NAVBAR FIX ===== */
+/* ===== MOBILE NAVBAR: CENTERED ROW ===== */
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;               /* ✅ allow wrap */
+    justify-content: center;       /* ✅ center row */
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .navbar-logo {
+    width: 36px;
+    height: auto;
+  }
+
+  .navbar-title {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+
+  .navbar-links {
+    display: flex;
+    flex-direction: row;           /* ✅ keep row */
+    flex-wrap: wrap;               /* ✅ wrap if needed */
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .navbar-links li {
+    list-style: none;
+  }
+
+  .navbar-links a,
+  .logout-btn {
+    padding: 6px 10px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+}
