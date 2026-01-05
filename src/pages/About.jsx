@@ -1,4 +1,4 @@
-import "../styles/About.css";
+import "../styles/about.css";
 
 import img1 from "../assets/1.jpg";
 import img2 from "../assets/2.jpg";
