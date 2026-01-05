@@ -1,27 +1,20 @@
 import { Link } from "react-router-dom";
-import { useContext } from "react";
-import { AuthContext } from "../context/AuthContext";
+import logo from "../assets/logo.gif";
+import "./Navbar.css";
 
 function Navbar() {
-  const { isAuthenticated, logout } = useContext(AuthContext);
-
   return (
     <nav className="navbar">
-      <h2>وزارة الداخلية</h2>
+      <div className="navbar-left">
+        <img src={logo} alt="Ministry Logo" className="navbar-logo" />
+        <span className="navbar-title">وزارة الداخلية</span>
+      </div>
 
-<div className="links">
-  <Link to="/">Home</Link>
-  <Link to="/about">About</Link>
-
-  {isAuthenticated && <Link to="/traffic">Traffic Report</Link>}
-
-  {isAuthenticated ? (
-    <button onClick={logout}>Logout</button>
-  ) : (
-    <Link to="/login">Login</Link>
-  )}
-</div>
-
+      <ul className="navbar-links">
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/login">Login</Link></li>
+      </ul>
     </nav>
   );
 }
