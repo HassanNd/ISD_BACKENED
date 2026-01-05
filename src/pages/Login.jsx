@@ -16,7 +16,7 @@ function Login() {
   const handleLogin = async () => {
     try {
       const res = await axios.post(
-        "`https://isd-frontend-5.onrender.com/api/auth/login",
+        "https://isd-frontend-5.onrender.com/api/auth/login",
         { username, password }
       );
 
