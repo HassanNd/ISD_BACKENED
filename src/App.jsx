@@ -1,31 +1,28 @@
-import { Routes, Route, Navigate } from "react-router-dom";
-import { useContext } from "react";
-import { AuthContext } from "./context/AuthContext";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Login from "./pages/Login";
 import TrafficReport from "./pages/TrafficReport";
+import { AuthProvider } from "./context/AuthContext";
+import ProtectedRoute from "./components/ProtectedRoute";
+import Footer from "./components/footer";
+
 
 function App() {
-  const { token } = useContext(AuthContext);
-
   return (
-    <>
-      <Navbar />   {/* 🔴 MUST ALWAYS BE HERE */}
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/login" element={<Login />} />
-
-        <Route
-          path="/traffic"
-          element={token ? <TrafficReport /> : <Navigate to="/login" />}
-        />
-      </Routes>
-    </>
+    <AuthProvider>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/traffic" element={<ProtectedRoute><TrafficReport /></ProtectedRoute>} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 
