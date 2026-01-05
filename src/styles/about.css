@@ -1,100 +1,63 @@
 .about-page {
+  padding: 50px 20px;
   direction: rtl;
-  background: #f5f6f8;
+  text-align: center;
 }
 
-/* ===== HERO ===== */
-.about-hero {
-  position: relative;
-  height: 260px;
-  background-image: url("https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 0 60px;
+.about-title {
+  font-size: 32px;
+  color: #0b2c4d;
+  margin-bottom: 15px;
 }
 
-.about-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-}
-
-.about-hero h1 {
-  position: relative;
-  color: white;
-  font-size: 34px;
-  z-index: 1;
-}
-
-/* ===== DECISIONS ===== */
-.decisions-container {
-  max-width: 1100px;
-  margin: -60px auto 60px;
-  padding: 0 20px;
-}
-
-.decision-card {
-  background: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 25px 30px;
-  margin-bottom: 30px;
-  border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-}
-
-.decision-content {
-  max-width: 75%;
-}
-
-.decision-date {
-  display: inline-block;
-  background: #f0f0f0;
-  padding: 5px 12px;
-  border-radius: 6px;
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-.decision-text {
-  font-size: 17px;
+.about-intro {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 18px;
+  color: #444;
   line-height: 1.8;
-  margin: 15px 0;
-  color: #000;
 }
 
-.read-more {
-  color: #1f3c88;
-  font-weight: bold;
-  text-decoration: none;
+/* GRID */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
 }
 
-/* ===== LOGO ===== */
-.decision-logo img {
-  width: 120px;
+/* CARD */
+.about-card {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .about-hero {
-    justify-content: center;
-    padding: 0;
+.about-card:hover {
+  transform: translateY(-5px);
+}
+
+.about-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.about-card p {
+  padding: 15px;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* SMALL SCREENS */
+@media (max-width: 600px) {
+  .about-title {
+    font-size: 26px;
   }
 
-  .decision-card {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .decision-content {
-    max-width: 100%;
-  }
-
-  .decision-logo {
-    margin-top: 20px;
+  .about-intro {
+    font-size: 16px;
   }
 }

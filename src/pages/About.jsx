@@ -1,61 +1,52 @@
-import "../styles/about.css";
+import "../styles/About.css";
+
+import img1 from "../assets/1.jpg";
+import img2 from "../assets/2.jpg";
+import img3 from "../assets/3.jpg";
+import img4 from "../assets/4.jpg";
 
 function About() {
   return (
-    <div className="about-page">
+    <div className="about-page fade">
+      <h1 className="about-title">حول وزارة الداخلية</h1>
 
-      {/* ===== HERO ===== */}
-      <div className="about-hero">
-        <div className="about-overlay"></div>
-        <h1>أحدث القرارات</h1>
-      </div>
+      <p className="about-intro">
+        تعمل وزارة الداخلية على تنظيم وإدارة حركة السير، تعزيز السلامة العامة،
+        وتطبيق القوانين المرورية باستخدام أحدث التقنيات والأنظمة الذكية.
+      </p>
 
-      {/* ===== DECISIONS ===== */}
-      <div className="decisions-container">
-
-        {/* CARD 1 */}
-        <div className="decision-card">
-          <div className="decision-content">
-            <span className="decision-date">22 كانون الأول 2025</span>
-
-            <p className="decision-text">
-              قرار صادر عن وزير الداخلية والبلديات أحمد الحجار حول منع سير
-              الشاحنات على الأراضي اللبنانية كافة خلال فترة أعياد الميلاد
-              ورأس السنة
-            </p>
-
-            <a href="#" className="read-more">اقرأ المزيد</a>
-          </div>
-
-          <div className="decision-logo">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Lebanese_Army_Emblem.svg/512px-Lebanese_Army_Emblem.svg.png"
-              alt="logo"
-            />
-          </div>
+      <div className="about-grid">
+        <div className="about-card">
+          <img src={img1} alt="Traffic Control" />
+          <p>
+            تنظيم حركة السير في الشوارع الرئيسية لضمان سلامة المواطنين
+            وتخفيف الازدحام المروري.
+          </p>
         </div>
 
-        {/* CARD 2 */}
-        <div className="decision-card">
-          <div className="decision-content">
-            <span className="decision-date">1 كانون الأول 2025</span>
-
-            <p className="decision-text">
-              قرار رقم 1149 تعديل بعض أحكام القرار رقم 1088/2025
-              موضوع تحديد توقيت سير الشاحنات في محافظات بيروت، جبل لبنان والبقاع
-            </p>
-
-            <a href="#" className="read-more">اقرأ المزيد</a>
-          </div>
-
-          <div className="decision-logo">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Lebanese_Army_Emblem.svg/512px-Lebanese_Army_Emblem.svg.png"
-              alt="logo"
-            />
-          </div>
+        <div className="about-card">
+          <img src={img2} alt="Monitoring" />
+          <p>
+            مراقبة الطرق عبر الكاميرات الذكية واتخاذ الإجراءات السريعة
+            عند حدوث أي طارئ.
+          </p>
         </div>
 
+        <div className="about-card">
+          <img src={img3} alt="Traffic Police" />
+          <p>
+            انتشار عناصر قوى الأمن الداخلي لتنظيم السير
+            وتطبيق القوانين المرورية.
+          </p>
+        </div>
+
+        <div className="about-card">
+          <img src={img4} alt="Traffic Technology" />
+          <p>
+            استخدام التكنولوجيا الحديثة والأنظمة الذكية
+            لتحسين إدارة المرور.
+          </p>
+        </div>
       </div>
     </div>
   );
